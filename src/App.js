@@ -20,7 +20,7 @@ const App = () => {
             <Sidebar />
           </div>
 
-          <div className="w-1/2 bg-gray-100 p-2">
+          <div className="w-1/2 bg-gray-100 p-2 overflow-y-scroll max-h-screen">
             <Route exact path="/" component={Hashnode} />
             <Route exact path="/dev" component={Dev} />
             <Route exact path="/hackernews" component={Hackernews} />

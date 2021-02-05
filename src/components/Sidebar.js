@@ -34,7 +34,7 @@ const Sidebar = () => {
                     <img src={hackernewsIcon} alt="logo"
                         className="h-12 w-12 mx-auto"
                     />
-                    <p className="text-xl font-semibold mt-2">Hackernews</p>
+                    <p className="text-xl font-semibold mt-2">HackerNews</p>
                 </div>
             </Link>
 
@@ -43,7 +43,7 @@ const Sidebar = () => {
                     <img src={producthuntIcon} alt="logo"
                         className="h-12 w-12 mx-auto "
                     />
-                    <p className="text-xl font-semibold mt-2">Producthunt</p>
+                    <p className="text-xl font-semibold mt-2">Product Hunt</p>
                 </div>
             </Link>
 

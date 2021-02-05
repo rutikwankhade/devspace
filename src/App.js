@@ -16,11 +16,15 @@ const App = () => {
         <div className="flex md:flex-row flex-col">
 
           <div className=" bg-indigo-500 md:w-1/2  md:h-screen h-full py-20">
-            <h1 className="text-4xl font-bold m-8 text-white">Devspace</h1>
+            <div className="m-8">
+              <h1 className="text-4xl font-bold text-white">Devspace</h1>
+              <span className="text-white italic">Get top posts from the best developer platforms.</span>
+            </div>
+
             <Sidebar />
           </div>
 
-          <div className="w-1/2 bg-gray-100 p-2 overflow-y-scroll max-h-screen">
+          <div className="md:w-1/2 bg-gray-100 p-2 overflow-y-scroll max-h-screen">
             <Route exact path="/" component={Hashnode} />
             <Route exact path="/dev" component={Dev} />
             <Route exact path="/hackernews" component={Hackernews} />

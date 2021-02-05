@@ -44,7 +44,7 @@ const Hashnode = () => {
 
     return (
         <div>
-            <h1 className="text-2xl font-semibold p-2 border-b-2 bg-white">Hashnode</h1>
+            <h1 className="rounded-md text-2xl font-semibold p-3 border-t-4 border-indigo-300 bg-white">Hashnode</h1>
             <div className="flex flex-row flex-wrap  justify-center">
                 {feedPosts.map(post => {
                     return (

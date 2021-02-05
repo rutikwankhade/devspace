@@ -20,7 +20,7 @@ const Dev = () => {
 
     return (
         <div>
-            <h1 className="text-2xl font-semibold p-2 border-b-2 bg-white">Top posts from dev.to</h1>
+            <h1 className="rounded-md text-2xl font-semibold p-3 border-t-4 border-gray-300 bg-white">dev.to</h1>
         
             <div className="flex flex-row flex-wrap  justify-center">
                 {devPosts.map(post => {

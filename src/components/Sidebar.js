@@ -10,7 +10,7 @@ import githubIcon from '../assets/images/github.png';
 
 const Sidebar = () => {
     return (
-        <div className="flex flex-row flex-wrap px-20 justify-center">
+        <div className="flex flex-row flex-wrap md:px-20 justify-center">
             <Link to="/">
                 <div className="shadow-md h-28 w-32 transform hover:scale-105 duration-100 p-4 m-2 flex flex-col bg-white rounded-lg  text-center">
                     <img src={hashnodeIcon} alt="logo"

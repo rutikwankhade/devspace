@@ -13,9 +13,9 @@ const App = () => {
     <div className=" text-center mx-auto ">
 
       <BrowserRouter>
-        <div className="flex flex-row">
+        <div className="flex md:flex-row flex-col">
 
-          <div className=" bg-indigo-500 w-1/2  h-screen py-20">
+          <div className=" bg-indigo-500 md:w-1/2  md:h-screen h-full py-20">
             <h1 className="text-4xl font-bold m-8 text-white">Devspace</h1>
             <Sidebar />
           </div>

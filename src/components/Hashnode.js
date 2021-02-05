@@ -15,7 +15,8 @@ const query = `{
             coverImage,
             slug,
             dateFeatured,
-            brief
+            brief,
+            cuid
         }
     }
   `;
@@ -48,7 +49,7 @@ const Hashnode = () => {
                 {feedPosts.map(post => {
                     return (
                         <a href={`https://${post.author.publicationDomain == '' ? post.author.blogHandle + '.hashnode.dev/' : post.author.publicationDomain}${post.slug}`}
-                            target="_blank" rel="noreferrer"
+                            target="_blank" rel="noreferrer" Key={post.cuid}
                         >
                             <div className="w-72 h-72 py-auto shadow flex flex-col bg-white rounded-md p-4 text-left m-2">
                                 <img src={post.coverImage == '' ? 'https://picsum.photos/seed/picsum/200/150' : post.coverImage} alt="image" className="rounded" />

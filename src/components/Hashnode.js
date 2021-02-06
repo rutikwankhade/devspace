@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Header from './Header';
 import hashnodeIcon from '../assets/images/hashnode.png';
 
 
@@ -45,14 +46,12 @@ const Hashnode = () => {
 
     return (
         <div>
-
-            <div className="sticky top-0 flex flex-row justify-center text-2xl font-semibold p-3 border-t-8 border-indigo-400 bg-white">
-                <img src={hashnodeIcon} alt="logo"
-                    className="h-6 w-6 m-1 mr-2"
-                />
-                <h1 className="text-center">Hashnode</h1>
-
-            </div>
+            <Header
+                icon={hashnodeIcon}
+                title='Hashnode'
+                borderColor='border-indigo-400'
+            />
+           
             <div className="flex flex-row flex-wrap  justify-center p-2">
                 {feedPosts.map(post => {
                     return (

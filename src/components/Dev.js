@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Header from './Header';
 import devIcon from '../assets/images/dev.webp';
 
 const Dev = () => {
@@ -22,13 +23,11 @@ const Dev = () => {
 
     return (
         <div>
-
-            <div className="sticky top-0 flex flex-row justify-center text-2xl font-semibold p-3 border-t-8 border-gray-500 bg-white">
-                <img src={devIcon} alt="logo"
-                    className="h-6 w-6 m-1 mr-2"
-                />
-                <h1 className="text-center">Dev</h1>
-            </div>
+            <Header
+                icon={devIcon}
+                title='Dev'
+                borderColor='border-gray-500'
+            />
 
             <div className="flex flex-row flex-wrap  justify-center p-2">
                 {devPosts.map(post => {

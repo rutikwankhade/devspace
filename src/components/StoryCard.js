@@ -22,11 +22,13 @@ const StoryCard = ({ id }) => {
 
     return (
         <div Key={details.id}
-        className="bg-white text-gray-700 p-2 text-xl m-2 text-left"
+            className="bg-white rounded shadow border-l-4 text-gray-700 p-4 text-xl m-2 text-left"
         >
-            <span>{details.score === null ? '' : details.score}</span>
+            <a href={details.url} target="_blank" rel="noreferrer"
+            >
 
-            <h2>{details.title === null ? '' : details.title}</h2>
+                <h2>{details.title}</h2>
+            </a>
         </div>
     );
 }

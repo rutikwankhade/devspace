@@ -5,7 +5,6 @@ const Hackernews = () => {
 
     const [stories, setStories] = useState([]);
 
-
     const getStories = async () => {
         const response = await fetch('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty', {
             headers: {
@@ -13,15 +12,15 @@ const Hackernews = () => {
             },
         })
         const apiResponse = await response.json();
-        console.log(apiResponse);
+        // console.log(apiResponse);
         setStories(apiResponse)
 
-       
+
     }
 
 
 
-   
+
 
 
     useEffect(() => {
@@ -29,11 +28,14 @@ const Hackernews = () => {
     })
     return (
         <div>
-            <h1 className="rounded-md text-2xl font-semibold p-3 border-t-4 border-yellow-300 bg-white">HackerNews</h1>
-        {stories.slice(0,20).map(storyId=>{
-           return <StoryCard id={storyId}/>
-        })}
-        
+            <h1 className=" text-2xl font-semibold p-3 border-t-8 border-yellow-300 bg-white">HackerNews</h1>
+            <div className="p-2 flex flex-col justify-center">
+
+                {stories.slice(0, 20).map(storyId => {
+                    return <StoryCard id={storyId} />
+                })}
+            </div>
+
         </div>
     );
 }

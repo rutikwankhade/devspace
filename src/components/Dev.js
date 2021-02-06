@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import devIcon from '../assets/images/dev.webp';
+
 const Dev = () => {
     const [devPosts, setDevPosts] = useState([]);
     const getDevFeed = async () => {
@@ -20,8 +22,14 @@ const Dev = () => {
 
     return (
         <div>
-            <h1 className="text-2xl font-semibold p-3 border-t-8 border-gray-500 bg-white">dev.to</h1>
-        
+
+            <div className="sticky top-0 flex flex-row justify-center text-2xl font-semibold p-3 border-t-8 border-gray-500 bg-white">
+                <img src={devIcon} alt="logo"
+                    className="h-6 w-6 m-1 mr-2"
+                />
+                <h1 className="text-center">Dev</h1>
+            </div>
+
             <div className="flex flex-row flex-wrap  justify-center p-2">
                 {devPosts.map(post => {
                     return (

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import StoryCard from './StoryCard';
+import hackernewsIcon from '../assets/images/hackernews.png';
+
 
 const Hackernews = () => {
 
@@ -28,7 +30,12 @@ const Hackernews = () => {
     })
     return (
         <div>
-            <h1 className=" text-2xl font-semibold p-3 border-t-8 border-yellow-300 bg-white">HackerNews</h1>
+            <div className="sticky top-0 flex flex-row justify-center text-2xl font-semibold p-3 border-t-8 border-yellow-400 bg-white">
+                <img src={hackernewsIcon} alt="logo"
+                    className="h-6 w-6 m-1 mr-2"
+                />
+                <h1 className="text-center">HackerNews</h1>
+            </div>
             <div className="p-2 flex flex-col justify-center">
 
                 {stories.slice(0, 20).map(storyId => {

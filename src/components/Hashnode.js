@@ -70,7 +70,7 @@ const Hashnode = () => {
                                     >
                                         <div className="w-72 h-72 py-auto shadow flex flex-col bg-white rounded-md p-4 text-left m-2">
                                             <img src={post.coverImage === '' ? 'https://picsum.photos/seed/picsum/200/150' : post.coverImage}
-                                                alt="cover-img" className="rounded" />
+                                                alt="cover-img" className="rounded h-36" />
                                             <h3 className="text-xl mt-2">
                                                 {post.title}
                                             </h3>

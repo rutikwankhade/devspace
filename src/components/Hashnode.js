@@ -55,7 +55,7 @@ const Hashnode = () => {
             <div className="flex flex-row flex-wrap  justify-center p-2">
                 {feedPosts.map(post => {
                     return (
-                        <div Key={post.cuid}>
+                        <div key={post.cuid}>
 
                             <a href={`https://${post.author.publicationDomain === '' ? post.author.blogHandle + '.hashnode.dev/' : post.author.publicationDomain}${post.slug}`}
                                 target="_blank" rel="noreferrer"

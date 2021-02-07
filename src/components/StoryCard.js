@@ -21,7 +21,7 @@ const StoryCard = ({ id }) => {
 
 
     return (
-        <div Key={details.id}
+        <div key={details.id}
             className="bg-white rounded shadow border-l-4 text-gray-700 p-3 text-xl m-2 text-left"
         >
             <a href={details.url} target="_blank" rel="noreferrer">

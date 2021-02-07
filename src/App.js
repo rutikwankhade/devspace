@@ -20,8 +20,13 @@ const App = () => {
               <h1 className="text-4xl font-bold text-white">Devspace</h1>
               <span className="text-white italic font-semibold">Get top posts from the best developer platforms.</span>
             </div>
-
             <Sidebar />
+            <div className="mt-12 bg-gray-900 shadow text-white p-2 mx-auto w-36 rounded">
+              <a href="https://github.com/rutikwankhade/devspace" target="_blank" rel="noreferrer" className="flex">
+                <span className="text-sm font-semibold"> ⭐ Star on Github</span>
+              </a>
+            </div>
+
           </div>
 
           <div className="md:w-1/2 bg-gray-100  overflow-y-scroll max-h-screen">

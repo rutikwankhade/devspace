@@ -1,41 +1,38 @@
-# Create React App + Tailwind CSS
-![screenshot (70)](https://user-images.githubusercontent.com/47467468/103127508-1a0e3e80-46b8-11eb-9d7d-91866a0e8e55.png)
+# 🚀 Devspace
+
+Get top posts form the best developer platforms.
+
+<p align="center">
+
+<p >
+<a href="https://github.com/rutikwankhade/devspace"><img src="https://img.shields.io/github/stars/rutikwankhade/devspace.svg?style=social&label=Star"></a>
+<a href="https://github.com/rutikwankhade/CoverView"><img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103"></a>
+<a href="https://lbesson.mit-license.org"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
+
+</p>
 
 
+## 👩‍💻 Developing
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[Setting up Tailwind CSS ](https://tailwindcss.com/docs/guides/create-react-app) in a Create React App project.
 
-## Available Scripts
 
-In the project directory, you can run:
+```shell
+git clone https://github.com/rutikwankhade/devspace.git
+cd devspace/
+npm start
+```
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 👇 Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+1. Fork it (<https://github.com/rutikwankhade/devspace/fork>)
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-## Learn More
-
-- [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-- [React documentation](https://reactjs.org/).
-- [Tailwindcss docs](https://tailwindcss.com/)
+Don't forget to leave a ⭐ if you found this useful.

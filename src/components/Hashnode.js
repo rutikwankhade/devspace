@@ -4,7 +4,6 @@ import hashnodeIcon from '../assets/images/hashnode.png';
 import Fade from 'react-reveal/Fade';
 import { ThreeDots } from 'svg-loaders-react'
 
-
 const query = `{
     storiesFeed(type:BEST)
         {
@@ -20,7 +19,6 @@ const query = `{
             dateFeatured,
             brief,
             cuid,
-        
         }
     }
   `;
@@ -41,12 +39,12 @@ const Hashnode = () => {
         const apiResponse = await response.json();
         setLoading(false);
         setFeedPosts(apiResponse.data.storiesFeed)
-        console.log(feedPosts);
+        // console.log(feedPosts);
     };
 
     useEffect(() => {
         fetchPosts();
-    })
+    }, [])
 
     return (
         <div>
@@ -66,28 +64,22 @@ const Hashnode = () => {
                     <div className="flex flex-row flex-wrap  justify-center p-2">
                         {feedPosts.map(post => {
                             return (
-                                <Fade bottom>
-                                    <div key={post.cuid}>
-
-
-                                        <a href={`https://${post.author.publicationDomain === '' ? post.author.blogHandle + '.hashnode.dev/' : post.author.publicationDomain}${post.slug}`}
-                                            target="_blank" rel="noreferrer"
-                                        >
-                                            <div className="w-72 h-72 py-auto shadow flex flex-col bg-white rounded-md p-4 text-left m-2">
-                                                <img src={post.coverImage === '' ? 'https://picsum.photos/seed/picsum/200/150' : post.coverImage} alt="cover-img" className="rounded" />
-                                                <h3 className="text-xl mt-2">{post.title}</h3>
-                                            </div>
-
-                                        </a>
-
-                                    </div>
+                                <Fade bottom key={post.cuid}>
+                                    <a href={`https://${post.author.publicationDomain === '' ? post.author.blogHandle + '.hashnode.dev/' : post.author.publicationDomain + '/'}${post.slug}`}
+                                        target="_blank" rel="noreferrer"
+                                    >
+                                        <div className="w-72 h-72 py-auto shadow flex flex-col bg-white rounded-md p-4 text-left m-2">
+                                            <img src={post.coverImage === '' ? 'https://picsum.photos/seed/picsum/200/150' : post.coverImage}
+                                                alt="cover-img" className="rounded" />
+                                            <h3 className="text-xl mt-2">
+                                                {post.title}
+                                            </h3>
+                                        </div>
+                                    </a>
                                 </Fade>
-
                             )
                         })}
-
                     </div>}
-
         </div>
     );
 }

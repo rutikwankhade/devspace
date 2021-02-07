@@ -49,11 +49,13 @@ const Producthunt = () => {
         try {
             const response = await fetch(`https://api.producthunt.com/v2/api/graphql`, opts)
             const topProducts = await response.json();
-            console.log(topProducts.data.posts.edges);
+            // console.log(topProducts.data.posts.edges);
             setLoading(false);
 
             setProductsList(topProducts.data.posts.edges);
-        } catch (e) { alert('Oops! we got a temperory problem, Try after some time.') }
+        } catch (e) {
+            alert('Oops! we got a temperory problem, Try after some time.')
+        }
 
     };
 
@@ -78,18 +80,20 @@ const Producthunt = () => {
 
                         {productsList.map(product => {
                             return (
-                                <Fade bottom>
-                                    <div key={product.node.id}
-                                        className="bg-white p-3 text-left m-2 rounded "
-                                    >
+                                <Fade bottom key={product.node.id}>
+                                    <div className="bg-white p-3 text-left m-2 rounded">
                                         <a href={product.node.url} target="_blank" rel="noreferrer">
                                             <div className="flex flex-row">
                                                 <img src={product.node.thumbnail.url} alt="thumbnail"
                                                     className="md:h-20 md:w-20 h-14 w-14 mr-4 rounded border-2"
                                                 />
                                                 <div className="flex flex-col my-auto">
-                                                    <h2 className="md:text-xl text-md font-semibold">{product.node.name}</h2>
-                                                    <span className="text-sm md:text-md">{product.node.tagline}</span>
+                                                    <h2 className="md:text-xl text-md font-semibold">
+                                                        {product.node.name}
+                                                    </h2>
+                                                    <span className="text-sm md:text-md">
+                                                        {product.node.tagline}
+                                                    </span>
                                                 </div>
 
                                                 <div className="text-center my-2 px-4 border-2 rounded h-14 w-14 flex flex-col mr-2 ml-auto justify-center">

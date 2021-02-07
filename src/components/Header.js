@@ -6,11 +6,13 @@ const Header = ({ icon, title, borderColor }) => {
                 <img src={icon} alt="logo"
                     className="h-6 w-6 m-1 mr-2"
                 />
-                <h1 className="text-center text-2xl">{title}</h1>
+                <h1 className="text-center text-2xl">
+                    {title}
+                </h1>
             </div>
-            <span className="mr-2 ml-auto  text-md py-1 bg-gray-700 text-white rounded px-2  ">🏆 Featured Today</span>
-
-
+            <span className="mr-2 ml-auto  text-md py-1 bg-gray-700 text-white rounded px-2  ">
+                🏆 Featured Today
+            </span>
         </div>
     );
 }

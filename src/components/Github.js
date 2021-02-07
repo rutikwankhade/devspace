@@ -16,15 +16,14 @@ const Github = () => {
     const getTrendingRepos = async () => {
         const response = await fetch('https://gtrend.yapie.me/repositories?since=daily')
         const trendingRepos = await response.json();
-        console.log(trendingRepos);
+        // console.log(trendingRepos);
         setLoading(false);
-
         setReposList(trendingRepos)
     };
 
     useEffect(() => {
         getTrendingRepos();
-    })
+    }, [])
 
     return (
         <div>
@@ -34,27 +33,32 @@ const Github = () => {
                 borderColor='border-purple-400'
             />
 
-
             {
                 (loading === true) ?
                     <div className="flex justify-center my-48">
                         < ThreeDots fill="#6366F1" />
                     </div>
                     :
-
                     <div className="flex flex-col  justify-center px-8 py-2">
                         {reposList.map(repo => {
                             return (
-                                <Fade bottom>
+                                <Fade bottom key={repo.name}>
                                     <div className="bg-white  p-4 px-8 rounded-md m-2 text-left">
                                         <a href={repo.url} target="-blank" rel="noreffer">
-                                            <h3 className="text-xl font-semibold text-blue-500">{repo.name}</h3>
-                                            <span className="text-md">{repo.description}</span>
+                                            <h3 className="text-xl font-semibold text-blue-500">
+                                                {repo.name}
+                                            </h3>
+                                            <span className="text-md">
+                                                {repo.description}
+                                            </span>
+
                                             <div className="flex flex-row my-2">
                                                 <div className="flex mr-2 text-sm">
                                                     <div className="m-1 h-4 w-4 rounded-full"
                                                         style={{ backgroundColor: `${repo.languageColor}` }}></div>
-                                                    <span className="m-1">{repo.language}</span>
+                                                    <span className="m-1">
+                                                        {repo.language}
+                                                    </span>
                                                 </div>
                                                 <div className="flex mr-2">
                                                     <img src={starIcon} alt="star" className="m-1 h-4 w-4" />
@@ -65,6 +69,7 @@ const Github = () => {
                                                     <span>{repo.forks}</span>
                                                 </div>
                                             </div>
+
                                         </a>
                                     </div>
                                 </Fade>

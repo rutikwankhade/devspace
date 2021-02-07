@@ -30,6 +30,7 @@ const Dev = () => {
             />
 
             <div className="flex flex-row flex-wrap  justify-center p-2">
+
                 {devPosts.map(post => {
                     return (
                         <a href={post.url}

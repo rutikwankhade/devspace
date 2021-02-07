@@ -51,7 +51,7 @@ const Hashnode = () => {
                 title='Hashnode'
                 borderColor='border-indigo-400'
             />
-           
+
             <div className="flex flex-row flex-wrap  justify-center p-2">
                 {feedPosts.map(post => {
                     return (

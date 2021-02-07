@@ -43,11 +43,13 @@ const Producthunt = () => {
 
             body: JSON.stringify({ query })
         };
+        try {
+            const response = await fetch(`https://api.producthunt.com/v2/api/graphql`, opts)
+            const topProducts = await response.json();
+            console.log(topProducts.data.posts.edges);
+            setProductsList(topProducts.data.posts.edges);
+        } catch (e) { alert('Oops! we got a temperory problem, Try after some time.') }
 
-        const response = await fetch(`https://api.producthunt.com/v2/api/graphql`, opts)
-        const topProducts = await response.json();
-        console.log(topProducts.data.posts.edges);
-        setProductsList(topProducts.data.posts.edges);
     };
 
     useEffect(() => {
@@ -63,6 +65,7 @@ const Producthunt = () => {
             />
 
             <div className="flex flex-col justify-center p-4">
+
                 {productsList.map(product => {
                     return (
                         <div key={product.node.id}
@@ -71,14 +74,19 @@ const Producthunt = () => {
                             <a href={product.node.url} target="_blank" rel="noreferrer">
                                 <div className="flex flex-row">
                                     <img src={product.node.thumbnail.url} alt="thumbnail"
-                                        className="h-20 w-20 mr-4 rounded border-2"
+                                        className="md:h-20 md:w-20 h-14 w-14 mr-4 rounded border-2"
                                     />
                                     <div className="flex flex-col my-auto">
-                                        <h2 className="text-xl font-semibold">{product.node.name}</h2>
-                                        <span>{product.node.tagline}</span>
+                                        <h2 className="md:text-xl text-md font-semibold">{product.node.name}</h2>
+                                        <span className="text-sm md:text-md">{product.node.tagline}</span>
                                     </div>
 
-                                    
+                                    <div className="text-center my-2 px-4 border-2 rounded h-14 w-14 flex flex-col mr-2 ml-auto justify-center">
+                                        <img src={upvoteIcon} alt="upvote"
+                                            className="h-4 w-4 mx-auto"
+                                        />
+                                        <span>{product.node.votesCount}</span>
+                                    </div>
                                 </div>
                             </a>
                         </div>

@@ -27,7 +27,6 @@ const Github = () => {
                 borderColor='border-purple-400'
             />
             <div className="flex flex-col  justify-center px-8 py-2">
-                <h1 className="text-xl py-1">Trending repositories today</h1>
                 {reposList.map(repo => {
                     return (
                         <div className="bg-white  p-4 px-8 rounded-md m-2 text-left">

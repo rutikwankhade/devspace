@@ -39,6 +39,7 @@ const Hackernews = () => {
 
             <div className="p-2 flex flex-col justify-center">
 
+
                 {stories.slice(0, 20).map(storyId => {
                     return <StoryCard id={storyId} />
                 })}

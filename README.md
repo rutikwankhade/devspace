@@ -11,6 +11,8 @@ Get top posts form the best developer platforms.
 
 </p>
 
+![frame_chrome_mac_light (7)](https://user-images.githubusercontent.com/47467468/107149320-f78d6780-697d-11eb-9f2a-6c3fbe6850f9.png)
+
 
 ## 👩‍💻 Developing
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

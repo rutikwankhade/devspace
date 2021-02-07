@@ -64,9 +64,9 @@ const Github = () => {
                                                     <img src={starIcon} alt="star" className="m-1 h-4 w-4" />
                                                     <span>{repo.stars}</span>
                                                 </div>
-                                                <div className="flex mx-2">
-                                                    <img src={forkIcon} alt="star" className="m-1 h-4 w-4" />
-                                                    <span>{repo.forks}</span>
+                                                <div className="flex mr-2">
+                                                    <img src={forkIcon} alt="fork" className="m-1 h-4 w-4" />
+                                                    <span className="mx-2">{repo.forks}</span>
                                                 </div>
                                             </div>
 

@@ -3,6 +3,7 @@ import Header from './Header';
 import githubIcon from '../assets/images/github.png';
 import starIcon from '../assets/icons/star.svg';
 import forkIcon from '../assets/icons/fork.svg';
+import Fade from 'react-reveal/Fade';
 
 
 
@@ -29,27 +30,29 @@ const Github = () => {
             <div className="flex flex-col  justify-center px-8 py-2">
                 {reposList.map(repo => {
                     return (
-                        <div className="bg-white  p-4 px-8 rounded-md m-2 text-left">
-                            <a href={repo.url} target="-blank" rel="noreffer">
-                                <h3 className="text-xl font-semibold text-blue-500">{repo.name}</h3>
-                                <span className="text-md">{repo.description}</span>
-                                <div className="flex flex-row my-2">
-                                    <div className="flex mr-2 text-sm">
-                                        <div className="m-1 h-4 w-4 rounded-full"
-                                            style={{ backgroundColor: `${repo.languageColor}` }}></div>
-                                        <span className="m-1">{repo.language}</span>
+                        <Fade bottom>
+                            <div className="bg-white  p-4 px-8 rounded-md m-2 text-left">
+                                <a href={repo.url} target="-blank" rel="noreffer">
+                                    <h3 className="text-xl font-semibold text-blue-500">{repo.name}</h3>
+                                    <span className="text-md">{repo.description}</span>
+                                    <div className="flex flex-row my-2">
+                                        <div className="flex mr-2 text-sm">
+                                            <div className="m-1 h-4 w-4 rounded-full"
+                                                style={{ backgroundColor: `${repo.languageColor}` }}></div>
+                                            <span className="m-1">{repo.language}</span>
+                                        </div>
+                                        <div className="flex mr-2">
+                                            <img src={starIcon} alt="star" className="m-1 h-4 w-4" />
+                                            <span>{repo.stars}</span>
+                                        </div>
+                                        <div className="flex mx-2">
+                                            <img src={forkIcon} alt="star" className="m-1 h-4 w-4" />
+                                            <span>{repo.forks}</span>
+                                        </div>
                                     </div>
-                                    <div className="flex mr-2">
-                                        <img src={starIcon} alt="star" className="m-1 h-4 w-4" />
-                                        <span>{repo.stars}</span>
-                                    </div>
-                                    <div className="flex mx-2">
-                                        <img src={forkIcon} alt="star" className="m-1 h-4 w-4" />
-                                        <span>{repo.forks}</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                                </a>
+                            </div>
+                        </Fade>
                     )
                 })}
             </div>

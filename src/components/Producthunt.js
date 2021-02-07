@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from './Header';
 import producthuntIcon from '../assets/images/producthunt.png';
 import upvoteIcon from '../assets/icons/upvote.svg';
+import Fade from 'react-reveal/Fade';
 
 
 const KEY = 'VBKaBP3CsYNdjwrpq9svI1OVSdXQPP__cxA6MffDLhU';
@@ -68,28 +69,30 @@ const Producthunt = () => {
 
                 {productsList.map(product => {
                     return (
-                        <div key={product.node.id}
-                            className="bg-white p-3 text-left m-2 rounded "
-                        >
-                            <a href={product.node.url} target="_blank" rel="noreferrer">
-                                <div className="flex flex-row">
-                                    <img src={product.node.thumbnail.url} alt="thumbnail"
-                                        className="md:h-20 md:w-20 h-14 w-14 mr-4 rounded border-2"
-                                    />
-                                    <div className="flex flex-col my-auto">
-                                        <h2 className="md:text-xl text-md font-semibold">{product.node.name}</h2>
-                                        <span className="text-sm md:text-md">{product.node.tagline}</span>
-                                    </div>
-
-                                    <div className="text-center my-2 px-4 border-2 rounded h-14 w-14 flex flex-col mr-2 ml-auto justify-center">
-                                        <img src={upvoteIcon} alt="upvote"
-                                            className="h-4 w-4 mx-auto"
+                        <Fade bottom>
+                            <div key={product.node.id}
+                                className="bg-white p-3 text-left m-2 rounded "
+                            >
+                                <a href={product.node.url} target="_blank" rel="noreferrer">
+                                    <div className="flex flex-row">
+                                        <img src={product.node.thumbnail.url} alt="thumbnail"
+                                            className="md:h-20 md:w-20 h-14 w-14 mr-4 rounded border-2"
                                         />
-                                        <span>{product.node.votesCount}</span>
+                                        <div className="flex flex-col my-auto">
+                                            <h2 className="md:text-xl text-md font-semibold">{product.node.name}</h2>
+                                            <span className="text-sm md:text-md">{product.node.tagline}</span>
+                                        </div>
+
+                                        <div className="text-center my-2 px-4 border-2 rounded h-14 w-14 flex flex-col mr-2 ml-auto justify-center">
+                                            <img src={upvoteIcon} alt="upvote"
+                                                className="h-4 w-4 mx-auto"
+                                            />
+                                            <span>{product.node.votesCount}</span>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
-                        </div>
+                                </a>
+                            </div>
+                        </Fade>
                     )
                 })}
             </div>

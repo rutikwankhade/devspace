@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Header from './Header';
 import devIcon from '../assets/images/dev.webp';
+import Fade from 'react-reveal/Fade';
+
 
 const Dev = () => {
     const [devPosts, setDevPosts] = useState([]);
@@ -33,14 +35,16 @@ const Dev = () => {
 
                 {devPosts.map(post => {
                     return (
-                        <a href={post.url}
-                            target="_blank" rel="noreferrer" Key={post.id}
-                        >
-                            <div className="w-72 h-64 py-auto shadow flex flex-col bg-white rounded-md p-4 text-left m-2">
-                                <img src={post.social_image === '' ? 'https://picsum.photos/seed/picsum/200/150' : post.social_image} alt="cover-img" className="rounded" />
-                                <h3 className="text-xl mt-2">{post.title}</h3>
-                            </div>
-                        </a>
+                        <Fade bottom>
+                            <a href={post.url}
+                                target="_blank" rel="noreferrer" Key={post.id}
+                            >
+                                <div className="w-72 h-64 py-auto shadow flex flex-col bg-white rounded-md p-4 text-left m-2">
+                                    <img src={post.social_image === '' ? 'https://picsum.photos/seed/picsum/200/150' : post.social_image} alt="cover-img" className="rounded" />
+                                    <h3 className="text-xl mt-2">{post.title}</h3>
+                                </div>
+                            </a>
+                        </Fade>
                     )
                 })}
             </div>

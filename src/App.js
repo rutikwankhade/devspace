@@ -7,6 +7,8 @@ import Dev from './components/Dev'
 import Hackernews from './components/Hackernews'
 import Producthunt from './components/Producthunt'
 import Github from './components/Github'
+import Techcrunch from './components/Techcrunch'
+
 
 const App = () => {
   return (
@@ -43,6 +45,8 @@ const App = () => {
             <Route exact path="/hackernews" component={Hackernews} />
             <Route exact path="/producthunt" component={Producthunt} />
             <Route exact path="/github" component={Github} />
+                        <Route exact path="/techcrunch" component={Techcrunch} />
+
 
           </div>
         </div>

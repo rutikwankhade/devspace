@@ -17,7 +17,7 @@ const Dev = () => {
             },
         })
         const apiResponse = await response.json();
-        // console.log(apiResponse);
+        console.log(apiResponse);
         setLoading(false);
         setDevPosts(apiResponse);
 

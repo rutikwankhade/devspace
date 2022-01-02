@@ -5,6 +5,8 @@ import devIcon from '../assets/images/dev.webp';
 import hackernewsIcon from '../assets/images/hackernews.png';
 import producthuntIcon from '../assets/images/producthunt.png';
 import githubIcon from '../assets/images/github.png';
+import techcrunchIcon from '../assets/images/techcrunch.png';
+
 
 
 
@@ -58,7 +60,7 @@ const Sidebar = () => {
 
             <Link to="/techcrunch">
                 <div className="shadow-md w-40 transform hover:scale-105 duration-100 p-4 m-2 flex flex-col bg-white rounded-lg  text-center">
-                    <img src={githubIcon} alt="logo"
+                    <img src={techcrunchIcon} alt="logo"
                         className="h-12 w-12 mx-auto "
                     />
                     <p className="text-xl font-semibold mt-2">Techcrunch</p>

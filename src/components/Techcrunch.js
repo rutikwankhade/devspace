@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
-import hackernewsIcon from '../assets/images/hackernews.png';
+import techcrunchIcon from '../assets/images/techcrunch.png';
 import { ThreeDots } from 'svg-loaders-react'
 import Fade from 'react-reveal/Fade';
 
@@ -33,7 +33,7 @@ const Techcrunch = () => {
     return (
         <div>
             <Header
-                icon={hackernewsIcon}
+                icon={techcrunchIcon}
                 title='Techcrunch'
                 borderColor='border-yellow-400'
             />
@@ -55,7 +55,7 @@ const Techcrunch = () => {
                                                 alt="cover-img" className="w-1/2 object-cover p-4 rounded"
                                             />
                                             <div className="flex flex-col p-6">
-<h3 className="text-xl font-semibold m-2">
+<h3 className="text-xl font-semibold mb-2">
                                                 {story.title}
                                                 </h3>
                                                 <p lassName="text-gray-500 text-sm">{ story.description}...</p>

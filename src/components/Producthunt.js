@@ -81,22 +81,22 @@ const Producthunt = () => {
                         {productsList.map(product => {
                             return (
                                 <Fade bottom key={product.node.id}>
-                                    <div className="bg-white w-8/12 p-6 text-left m-2 rounded">
+                                    <div className="bg-white md:w-8/12 p-6 text-left m-2 rounded shadow-sm hover:shadow">
                                         <a href={product.node.url} target="_blank" rel="noreferrer">
                                             <div className="flex flex-row">
                                                 <img src={product.node.thumbnail.url} alt="thumbnail"
-                                                    className="md:h-20 md:w-20 h-14 w-14 mr-4 rounded border-2 border-gray-200"
+                                                    className="md:h-20 md:w-20 h-14 w-14 mr-4 rounded border-gray-200"
                                                 />
                                                 <div className="flex flex-col my-auto">
                                                     <h2 className="md:text-xl text-md font-semibold">
                                                         {product.node.name}
                                                     </h2>
-                                                    <span className="text-sm md:text-md">
+                                                    <span className="md:text-md text-sm text-gray-500">
                                                         {product.node.tagline}
                                                     </span>
                                                 </div>
 
-                                                <div className="text-center my-2 px-4 border-2 rounded h-14 w-14 flex flex-col mr-2 ml-auto justify-center">
+                                                <div className="text-center my-2 px-4 border shadow-sm rounded h-14 w-14 flex flex-col mr-2 ml-auto justify-center">
                                                     <img src={upvoteIcon} alt="upvote"
                                                         className="h-4 w-4 mx-auto"
                                                     />

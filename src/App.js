@@ -37,7 +37,7 @@ const App = () => {
 
             <Sidebar />
 
-            <div className="my-2 p-2 text-gray-400 flex flex-row justify-evenly">
+            <div className=" text-gray-400 flex flex-row justify-evenly">
               <a href="https://github.com/rutikwankhade/devspace" target="_blank" rel="noreferrer" className="flex">
                 <span className="text-sm font-semibold  hover:text-gray-600">
                   ⭐ Star on Github

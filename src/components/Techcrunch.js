@@ -19,7 +19,7 @@ const Techcrunch = () => {
         })
         // console.log(response)
         const apiResponse = await response.json();
-        console.log(apiResponse);
+        // console.log(apiResponse);
         setLoading(false);
         setStories(apiResponse.articles)
     }
@@ -43,24 +43,24 @@ const Techcrunch = () => {
                         < ThreeDots fill="#6366F1" />
                     </div>
                     :
-                    <div className="p-2 flex flex-row flex-wrap justify-center">
+                    <div className="p-2 flex flex-row flex-wrap justify-center md:px-20">
                         {stories.map(story => {
                             return (
                                 <Fade bottom key={story.id}>
                                     <a href={story.link}
                                         target="_blank" rel="noreferrer"
                                     >
-                                        <div className=" py-auto shadow flex flex-row bg-white rounded-md  text-left m-2">
+                                        <div className=" py-auto shadow-sm hover:shadow flex md:flex-row flex-col items-center bg-white rounded-md  text-left m-2">
                                             <img src={story.image === '' ? 'https://picsum.photos/seed/picsum/200/150' : story.image}
-                                                alt="cover-img" className="w-1/2 object-cover p-4 rounded"
+                                                alt="cover-img" className="md:w-80 w-full h-60 object-cover p-4 rounded"
                                             />
                                             <div className="flex flex-col p-6">
-<h3 className="text-xl font-semibold mb-2">
-                                                {story.title}
+                                                <h3 className="text-2xl font-semibold mb-2">
+                                                    {story.title}
                                                 </h3>
-                                                <p lassName="text-gray-500 text-sm">{ story.description}...</p>
+                                                <p lassName="text-gray-500 text-sm">{story.description}...</p>
                                             </div>
-                                            
+
                                         </div>
                                     </a>
                                 </Fade>

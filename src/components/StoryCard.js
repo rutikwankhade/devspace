@@ -25,7 +25,7 @@ const StoryCard = ({ id }) => {
     return (
         <Fade bottom>
             <div key={details.id}
-                className="bg-white rounded shadow border-l-4 text-gray-700 p-3 px-4 text-xl m-1 text-left"
+                className="bg-white rounded shadow-sm hover:shadow border-l-4 text-gray-700 p-3 px-4 text-xl m-1 text-left"
             >
                 <a href={details.url} target="_blank" rel="noreferrer">
                     <h2>{details.title}</h2>

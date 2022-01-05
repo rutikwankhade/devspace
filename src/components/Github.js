@@ -39,11 +39,11 @@ const Github = () => {
                         < ThreeDots fill="#6366F1" />
                     </div>
                     :
-                    <div className="flex flex-col  justify-center px-8 py-2">
+                    <div className="flex flex-col  justify-center px-auto py-2">
                         {reposList.map(repo => {
                             return (
                                 <Fade bottom key={repo.name}>
-                                    <div className="bg-white  p-4 px-8 rounded-md m-2 text-left">
+                                    <div className="bg-white w-8/12 mx-auto p-4 px-8 rounded-md m-2 text-left">
                                         <a href={repo.url} target="-blank" rel="noreffer">
                                             <h3 className="text-xl font-semibold text-blue-500">
                                                 {repo.name}

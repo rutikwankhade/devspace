@@ -76,16 +76,16 @@ const Producthunt = () => {
                         < ThreeDots fill="#6366F1" />
                     </div>
                     :
-                    <div className="flex flex-col justify-center p-4">
+                    <div className="flex flex-col justify-center items-center p-4">
 
                         {productsList.map(product => {
                             return (
                                 <Fade bottom key={product.node.id}>
-                                    <div className="bg-white p-3 text-left m-2 rounded">
+                                    <div className="bg-white w-8/12 p-6 text-left m-2 rounded">
                                         <a href={product.node.url} target="_blank" rel="noreferrer">
                                             <div className="flex flex-row">
                                                 <img src={product.node.thumbnail.url} alt="thumbnail"
-                                                    className="md:h-20 md:w-20 h-14 w-14 mr-4 rounded border-2"
+                                                    className="md:h-20 md:w-20 h-14 w-14 mr-4 rounded border-2 border-gray-200"
                                                 />
                                                 <div className="flex flex-col my-auto">
                                                     <h2 className="md:text-xl text-md font-semibold">

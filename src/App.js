@@ -8,44 +8,58 @@ import Hackernews from './components/Hackernews'
 import Producthunt from './components/Producthunt'
 import Github from './components/Github'
 import Techcrunch from './components/Techcrunch'
+// import logo from './assets/images/'
 
 
 const App = () => {
   return (
-    <div className=" text-center mx-auto ">
+    <div className="  mx-auto ">
 
       <BrowserRouter>
         <div className="flex md:flex-row flex-col">
 
-          <div className=" bg-indigo-500 md:w-1/2  md:h-screen h-full py-20">
-            <div className="m-8">
-              <h1 className="text-4xl font-bold text-white">
-                Devspace
-              </h1>
-              <span className="text-white italic font-semibold">
-                Get top posts from the best developer platforms.
-              </span>
+          <div className="bg-purple-50  p-4 md:w-1/3 md:h-screen h-full">
+
+
+            <div className="bg-white p-4 flex items-center rounded-xl shadow-sm">
+
+              <span className="bg-indigo-100 p-2 text-2xl rounded-xl mr-2">🚀</span>
+              <div>
+                <h1 className="text-2xl text-indigo-500 font-bold   ">
+                  Devspace
+                </h1>
+                <span className="text-gray-500 italic text-sm">
+                  Top posts from the best dev sites.
+                </span>
+              </div>
+
             </div>
 
             <Sidebar />
 
-            <div className="mt-12 bg-gray-900 shadow text-white p-2 mx-auto w-36 rounded">
+            <div className="my-2 p-2 text-gray-400 flex flex-row justify-evenly">
               <a href="https://github.com/rutikwankhade/devspace" target="_blank" rel="noreferrer" className="flex">
-                <span className="text-sm font-semibold">
+                <span className="text-sm font-semibold  hover:text-gray-600">
                   ⭐ Star on Github
+                </span>
+              </a>
+
+              <a href="https://rutikwankhade.dev" target="_blank" rel="noreferrer" className="flex">
+                <span className="text-sm ml-auto mr-2 font-semibold hover:text-gray-600">
+                  Rutik Wankhade
                 </span>
               </a>
             </div>
 
           </div>
 
-          <div className="md:w-1/2 bg-gray-100  overflow-y-scroll max-h-screen">
+          <div className=" bg-gray-50 w-full  overflow-y-scroll max-h-screen">
             <Route exact path="/" component={Hashnode} />
             <Route exact path="/dev" component={Dev} />
             <Route exact path="/hackernews" component={Hackernews} />
             <Route exact path="/producthunt" component={Producthunt} />
             <Route exact path="/github" component={Github} />
-                        <Route exact path="/techcrunch" component={Techcrunch} />
+            <Route exact path="/techcrunch" component={Techcrunch} />
 
 
           </div>

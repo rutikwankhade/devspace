@@ -35,7 +35,7 @@ const Techcrunch = () => {
             <Header
                 icon={techcrunchIcon}
                 title='Techcrunch'
-                borderColor='border-yellow-400'
+                borderColor='border-green-400'
             />
             {
                 (loading === true) ?

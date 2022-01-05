@@ -42,7 +42,7 @@ const Hackernews = () => {
                         < ThreeDots fill="#6366F1" />
                     </div>
                     :
-                    <div className="p-2 flex flex-col justify-center">
+                    <div className="p-2 px-10 flex flex-col justify-center">
                         {stories.slice(0, 20).map(storyId => {
                             return <StoryCard id={storyId} />
                         })}

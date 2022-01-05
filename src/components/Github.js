@@ -30,7 +30,6 @@ const Github = () => {
             <Header
                 icon={githubIcon}
                 title='Github'
-                borderColor='border-purple-400'
             />
 
             {

@@ -51,7 +51,6 @@ const Hashnode = () => {
             <Header
                 icon={hashnodeIcon}
                 title='Hashnode'
-                borderColor='border-indigo-400'
             />
 
             {

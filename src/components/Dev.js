@@ -32,8 +32,7 @@ const Dev = () => {
         <div>
             <Header
                 icon={devIcon}
-                title='Dev'
-                borderColor='border-gray-500'
+                title='Dev.to'
             />
             {
                 (loading === true) ?

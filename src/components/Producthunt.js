@@ -68,7 +68,6 @@ const Producthunt = () => {
             <Header
                 icon={producthuntIcon}
                 title='Product Hunt'
-                borderColor='border-red-300'
             />
             {
                 (loading === true) ?

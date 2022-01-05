@@ -34,7 +34,6 @@ const Hackernews = () => {
             <Header
                 icon={hackernewsIcon}
                 title='Hackernews'
-                borderColor='border-yellow-400'
             />
             {
                 (loading === true) ?

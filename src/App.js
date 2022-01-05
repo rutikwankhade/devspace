@@ -17,7 +17,7 @@ const App = () => {
       <BrowserRouter>
         <div className="flex md:flex-row flex-col">
         
-          <div className="w-1/3">
+          <div className="md:w-1/3">
             <Sidebar />
           </div>
 

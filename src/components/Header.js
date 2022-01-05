@@ -1,5 +1,5 @@
 import React from 'react';
-const Header = ({ icon, title, borderColor }) => {
+const Header = ({ icon, title }) => {
     return (
         <div className="sticky z-10 top-0 flex flex-row justify-center  font-semibold p-4  bg-white m-6 rounded-xl shadow-sm border-t-8">
             <div className="ml-1 mr-auto flex flex-row">

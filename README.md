@@ -1,6 +1,8 @@
 # 🚀 Devspace
 
 Get top posts form the best developer platforms.
+Shows top posts from Hashnode, dev, Hackernews, Producthunt, Github and Techcrunch.
+
 
 <p align="center">
 
@@ -10,8 +12,13 @@ Get top posts form the best developer platforms.
 <a href="https://lbesson.mit-license.org"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
 
 </p>
+<!-- 
+![frame_chrome_mac_light (7)](https://user-images.githubusercontent.com/47467468/107149320-f78d6780-697d-11eb-9f2a-6c3fbe6850f9.png) -->
 
-![frame_chrome_mac_light (7)](https://user-images.githubusercontent.com/47467468/107149320-f78d6780-697d-11eb-9f2a-6c3fbe6850f9.png)
+![devspace-frame](https://user-images.githubusercontent.com/47467468/148253660-0ae80495-1d36-4a2b-a80d-7ac8ee33e5b8.png)
+
+
+Built with React and TailwindCSS
 
 
 ## 👩‍💻 Developing
